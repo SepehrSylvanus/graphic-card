@@ -1,0 +1,53 @@
+.navContainer {
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  bottom: 1.5em;
+}
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  gap: 1.5em;
+}
+.navList li {
+  z-index: 100;
+}
+.slide {
+  width: 60px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  left: 73px;
+  bottom: -5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all .3s;
+}
+.slide::before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 25px;
+  background-color: transparent;
+  bottom: -1px;
+  left: -25px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 13px 0 0 white;
+}
+.slide::after {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 25px;
+  background-color: transparent;
+  bottom: -1px;
+  right: -25px;
+  border-bottom-left-radius: 15px;
+  box-shadow: -13px 0 0 white;
+}
+input {
+  display: block;
+}
+

@@ -1,0 +1,31 @@
+.rezaProf{
+    width: 100%;
+    border-radius: 24px;
+}
+.header{
+    display: grid;
+    place-content: center;
+    background: radial-gradient(61.14% 73.94% at 44.57% -39.19%, #9ED2FF 0%, rgba(158, 210, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    conic-gradient(from 172.44deg at 107.61% 54.63%, rgba(254, 170, 228, 0) 0deg, #FDA9E7 18.03deg, rgba(254, 170, 229, 0) 104.03deg, rgba(254, 170, 228, 0) 360deg),
+    radial-gradient(38.17% 86.77% at 10.46% 79.54%, #FFEEC3 0%, rgba(255, 238, 195, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px ;
+}
+.headerContainer{
+    text-align: center;
+   padding: 3.5rem 5.25rem 8.1875rem;
+ 
+}
+.headerContainer h3{
+    width: 200px;
+}
+.headerContainer p{
+    color: gray;
+}
+.imgContainer{
+width: 72px;
+height: 72px;
+margin: 0 auto;
+
+}
