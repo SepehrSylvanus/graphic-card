@@ -16,13 +16,13 @@
 }
 .slide {
   width: 60px;
-  height: 30px;
+  height: 32px;
   background-color: white;
   position: absolute;
   left: 73px;
-  bottom: -5px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  bottom: -6px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   transition: all .3s;
 }
 .slide::before {
