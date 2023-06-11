@@ -6,12 +6,12 @@ const Header = () => {
     <div className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.imgContainer}>
-          <img className={styles.rezaProf} src={rezaProf} alt="Reza image" />
+          <img className={styles.rezaProf} src={rezaProf} alt="Reza" />
         </div>
-        <h3>Reza Kargozar</h3>
-        <p>Digital marketing</p>
+        <h3 className={styles.h3}>رضا کارگزار</h3>
+        <h4 className={styles.subHeading}>طراح برند، کارشناس شبکه‌های اجتماعی</h4>
+        <p className={styles.p}>سرپرست استودیو شنودید</p>
       </div>
-     
     </div>
   );
 };

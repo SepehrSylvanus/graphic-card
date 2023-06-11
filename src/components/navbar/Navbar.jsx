@@ -1,31 +1,92 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import { NavLink, NavNavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+
 const Navbar = () => {
   const [selected, setSelected] = useState(0);
-  function setPosAndWidth() {
+  const bold = {
+    fontWeight: "900",
+  };
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    switch (path) {
+      case "/social":
+        setSelected(0);
+        break;
+      case "/direction":
+        setSelected(1);
+        break;
+      case "/menu":
+        setSelected(2);
+        break;
+      case "/gallery":
+        setSelected(3);
+        break;
+      case "/projects":
+        setSelected(4);
+        break;
+      case "/form":
+        setSelected(5);
+        break;
+      default:
+        setSelected(0);
+        break;
+    }
+  }, [location.pathname]);
+
+  const setPosAndWidth = () => {
     switch (selected) {
       case 1:
-        return { width: "40px", left: "156px" };
+        return { width: "70px", left: "63px" };
       case 2:
-        return { width: "70px", left: "205px" };
+        return { width: "40px", left: "133px" };
+      case 3:
+        return { width: "50px", left: "171px" };
+      case 4:
+        return { width: "60px", left: "219px" };
+      case 5:
+        return { width: "80px", left: "280px" };
       default:
-        return { width: "60px", left: "90px" };
+        return { width: "46px", left: "14px" };
     }
-  }
+  };
+
   return (
     <div className={styles.navContainer}>
       <ul className={styles.navList}>
-        <li onClick={() => setSelected(0)}>
-          <NavLink to="/about">About</NavLink>
+        <li className={styles.links} onClick={() => setSelected(0)}>
+          <NavLink style={selected === 0 ? bold : { fontWeight: "400" , opacity: .6}} to="/social">
+            ارتباط
+          </NavLink>
         </li>
-        <li onClick={() => setSelected(1)}>
-          <NavLink to="/bio">Bio</NavLink>
+        <li className={styles.links} onClick={() => setSelected(1)}>
+          <NavLink style={selected === 1 ? bold : { fontWeight: "400" , opacity: .6}} to="/direction">
+            مسیریابی
+          </NavLink>
         </li>
-        <li onClick={() => setSelected(2)}>
-          <NavLink to="/contact">Contact</NavLink>
+        <li className={styles.links} onClick={() => setSelected(2)}>
+          <NavLink style={selected === 2 ? bold : { fontWeight: "400" , opacity: .6}} to="/menu">
+            منو
+          </NavLink>
         </li>
-        <div className={styles.slide} style={setPosAndWidth()}>
+        <li className={styles.links} onClick={() => setSelected(3)}>
+          <NavLink style={selected === 3 ? bold : { fontWeight: "400" , opacity: .6}} to="/gallery">
+            گالری
+          </NavLink>
+        </li>
+        <li className={styles.links} onClick={() => setSelected(4)}>
+          <NavLink style={selected === 4 ? bold : { fontWeight: "400" , opacity: .6}} to="/projects">
+            پروژه‌ها
+          </NavLink>
+        </li>
+        <li className={styles.links} onClick={() => setSelected(5)}>
+          <NavLink style={selected === 5 ? bold : { fontWeight: "400" , opacity: .6}} to="/form">
+            فرم تماس
+          </NavLink>
+        </li>
+        <div className={styles.slide } style={setPosAndWidth()}>
           <div className={styles.slideInner}></div>
         </div>
       </ul>

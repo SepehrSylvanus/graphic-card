@@ -3,31 +3,85 @@
   place-content: center;
   position: relative;
   height: 100vh;
-  width: 630px;
+  width: 320px;
+  padding-left: 3em;
 }
 .cardContainer {
-  min-width: 370px;
-  height: 600px;
-  margin: 0 auto;
-  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.031),
+      width: 370px;
+    height: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.031),
     0px 6.7px 5.3px rgba(0, 0, 0, 0.044), 0px 12.5px 10px rgba(0, 0, 0, 0.055),
     0px 22.3px 17.9px rgba(0, 0, 0, 0.066),
     0px 41.8px 33.4px rgba(0, 0, 0, 0.079), 0px 100px 80px rgba(0, 0, 0, 0.11);
-  transform: scale(0.9);
-  border-radius: 24px;
-  background-color: #f2f2f2;
-  position: relative;
-  bottom: 61px;
-  overflow: hidden;
-  z-index: 0;
+    transform: scale(0.8);
+    border-radius: 24px;
+    background-color: #f2f2f2;
+    position: relative;
+    bottom: 61px;
+    right: 21px;
+    z-index: 2;
 }
 
-.bodyContainer {
-  height: 330px;
-  position: relative;
-  bottom: 25px;
+.imgContainer{
+  width: 350px;
+  height: 300px;
+border-radius: 10px;
+ margin: 0 auto;
+ margin-top: 1em;
+ position: relative;
 }
+.imgContainer img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.imgDescription{
+  position: absolute;
+  bottom: 0.7em;
+  right: 0.8em;
+  color: white;
+  background-color: #aa173b;
+  padding: 0.3em 2.5em;
+  border-radius: 2em;
+  font-size: 18px;
+}
+.description{
+  white-space: pre-wrap;
+  padding: 0 1em;
+  padding-top: 1em;
+  line-height: 1.2;
+  text-align: right;
+  font-size: 16px;
+}
+.closeIconContainer {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  background-color: #aa173b;
+  color: white;
+  padding: 0 8px;
+  border-radius: 50%;
+  transition: all .4s;
+  transform: scale(.9);
+}
+.closeIconContainer:hover{
+  background-color: #ee2c5c;
+}
+.closeIconContainer i {
+  font-size: 28px;
+  position: relative;
+  top: 6px;
+}
+.backLayer {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  right: -200px;
+  z-index: 1;
+  top: -10em;
 
+}
 /* ====== IPHONE 5/SE PORTRAIT ====== */
 @media screen and (min-width: 320px) and (min-height: 568px) {
   .cardContainer {
@@ -44,6 +98,7 @@
   .cardContainer {
     transform: scale(0.8);
     margin-bottom: 1em;
+    margin-right: 6px;
   }
   .appContainer{
     width: 375px;
@@ -57,7 +112,7 @@
     margin-bottom: 4em;
   }
   .appContainer {
-    width:411px;
+    width: 411px;
   }
 }
 

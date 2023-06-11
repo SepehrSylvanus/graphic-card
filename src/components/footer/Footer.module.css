@@ -1,0 +1,99 @@
+.footerContainer {
+  min-width: 370px;
+  max-width: 370px;
+  height: 100px;
+  background-color: #aa173b;
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%) scale(0.9);
+
+}
+.iconsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  min-width: 370px;
+  max-width: 370px;
+}
+.iconContainer {
+  margin-top: 1em;
+}
+.iconContainer i {
+  font-size: 40px;
+  color: #f2f2f2;
+}
+
+.barcodeContainer .iconContainer i {
+  color: black;
+}
+.barcodeContainer {
+  background-color: #f2f2f2;
+  padding: 25px;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  border-radius: 46px;
+  border: 10px solid black;
+  position: relative;
+  bottom: 41px;
+  transition: all .3s;
+}
+
+.barcodeContainer:hover  {
+  background-color: #aa173b;
+  
+}
+
+/* ====== IPHONE 5/SE PORTRAIT ====== */
+@media screen and (min-width: 320px) and (min-height: 568px) {
+    .footerContainer {
+      transform: scale(.7) translate(72%);
+     
+    }
+  
+  }
+
+/* ====== IPHONE 6/7/8 PORTRAIT ====== */
+@media screen and (min-width: 375px) and (min-height: 667px) {
+  .footerContainer {
+    transform: scale(.8) translate(63%);
+    
+  }
+}
+/* ====== PIXEL PORTRAIT ====== */
+@media screen and (min-width: 411px) and (min-height: 823px) {
+  .footerContainer {
+    transform: scale(1) translate(50%);
+margin-bottom: 1em;
+  }
+}
+
+/* ====== TABLET IPOD PORTRAIT ====== */
+@media screen and (min-width: 768px) and (min-height: 1024px) {
+  .footerContainer {
+    transform: scale(1.3) translate(50%);
+    right: 58%;
+  }
+}
+/* ====== TABLET IPOD PRO PORTRAIT ====== */
+@media screen and (min-width: 1024px) and (min-height: 1366px) {
+  .footerContainer {
+    transform: scale(1.7) translate(50%);
+    right: 63%;
+    bottom: 3em;
+  }
+}
+/* ====== TABLET IPOD PRO PORTRAIT ====== */
+@media screen and (min-width: 1200px) and (min-height: 2000px) {
+  .footerContainer {
+    transform: scale(2.4);
+  }
+}

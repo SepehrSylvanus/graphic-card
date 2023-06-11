@@ -1,0 +1,21 @@
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 332px;
+  margin: 1em auto;
+}
+.formContainer input,
+.formContainer textarea,
+.formContainer button{
+  padding: 12px 0;
+  padding-right: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+}
+.formContainer button{
+  background-color:#AA173B;
+  color: white;
+  font-size: 17px;
+}
