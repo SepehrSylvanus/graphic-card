@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/card/Card";
 import Body from "./components/body/Body";
 import Direction from "./components/direction/Direction";
-
+import { useState } from "react";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -14,20 +14,22 @@ import Projects from "./components/projects/Projects";
 import Menu from "./components/menu/Menu";
 import Form from "./components/form/Form";
 import Gallery from "./components/gallery/Gallery";
-import SaveContact from "./components/saveContact/SaveContact";
-import Share from "./components/share/Share";
 import Item from "./components/items/Item";
 import Project from "./project/Project";
 
 function App() {
+  const [enableTransition, setEnableTransition] = useState(true)
+  if(!enableTransition){
+    setTimeout(()=>{
+      setEnableTransition(true)
+    }, 100)
+  }
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-      <Route path="/share" element={<Share/>}/>
-      <Route path="/contact-save" element={<SaveContact/>}/>
-      <Route path="gallery/:itemNumber" element={<Item />} />
-      <Route path="projects/:projectNumber" element={<Project />} />
-      <Route path="/" element={<Card />}>
+      <Route path="gallery/:itemNumber" element={<Item setEnableTransition={setEnableTransition}/>} />
+      <Route path="projects/:projectNumber" element={<Project setEnableTransition={setEnableTransition}/>} />
+      <Route path="/" element={<Card setEnableTransition={setEnableTransition} enableTransition={enableTransition}/>}>
         <Route path="social" element={<Body />} />
         <Route path="direction" element={<Direction />} />
         <Route path="menu" element={<Menu />} />
@@ -40,9 +42,9 @@ function App() {
     )
   );
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
 

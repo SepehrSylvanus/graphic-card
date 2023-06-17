@@ -5,11 +5,12 @@
   font-family: 'Vazirmatn', sans-serif;
 }
 body {
-  display: grid;
-  place-content: center;
+
   height: 100vh;
   background-color: #000;
-
+  display: grid;
+  place-content: center;
+overflow-y: hidden;
 }
 a {
   text-decoration: none;
@@ -18,8 +19,4 @@ a {
 }
 p{
   font-size: 14px;
-}
-#root{
-overflow: hidden;
-  width: auto;
 }

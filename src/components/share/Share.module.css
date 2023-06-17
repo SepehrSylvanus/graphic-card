@@ -1,28 +1,26 @@
 .appContainer {
-  display: grid;
-  place-content: center;
-  position: relative;
-  height: 100vh;
-  width: 320px;
-padding-left: 1.7em;
+  overflow: visible;
+  height: 0;
 }
 .cardContainer {
-      width: 370px;
-    height: 600px;
-    margin: 0 auto;
-    box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.031),
+  margin: auto;
+  position: fixed;
+  top: 42.1%;
+  left: 50.3%;
+  min-width: 370px;
+  height: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 2.8px 2.2px rgba(0, 0, 0, 0.031),
     0px 6.7px 5.3px rgba(0, 0, 0, 0.044), 0px 12.5px 10px rgba(0, 0, 0, 0.055),
     0px 22.3px 17.9px rgba(0, 0, 0, 0.066),
     0px 41.8px 33.4px rgba(0, 0, 0, 0.079), 0px 100px 80px rgba(0, 0, 0, 0.11);
-    transform: scale(0.8);
-    border-radius: 24px;
-    background-color: #f2f2f2;
-    position: relative;
-    bottom: 61px;
-    right: 21px;
-    overflow: hidden;
-    z-index: 2;
-  }
+  border-radius: 24px;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  z-index: 1000;
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
 
 .closeIconContainer {
   position: absolute;
@@ -88,79 +86,125 @@ background-color: #ee2c5c;
   margin-top: 20px;
 }
 .backLayer {
-  position: absolute;
-  width: 5000px;
-  height: 5000px;
-  right: -200px;
-  z-index: 1;
-  top: -10em;
- 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }
-/* ====== IPHONE 5/SE PORTRAIT ====== */
+
 @media screen and (min-width: 320px) and (min-height: 568px) {
   .cardContainer {
-    transform: scale(0.7);
-    margin-bottom: 1em;
-    position: relative;
-    left: -9px;
-  }
-  .appContainer{
-    width: 320px;
-   
+    transform: translate(-49.5%, -51.1%) scale(0.7);
   }
 }
-
-/* ====== IPHONE 6/7/8 PORTRAIT ====== */
+@media screen and (min-width: 320px) and (min-height: 628px) {
+  .cardContainer {
+    transform: translate(-49.5%, -50.1%) scale(0.7);
+  }
+}
+@media screen and (min-width: 360px) and (min-height: 640px) {
+  .cardContainer {
+    transform: translate(-49.5%, -50.1%) scale(0.7);
+  }
+}
+@media screen and (min-width: 360px) and (min-height: 740px) {
+  .cardContainer {
+    transform: translate(-49.5%, -49.1%) scale(0.7);
+  }
+}
 @media screen and (min-width: 375px) and (min-height: 667px) {
   .cardContainer {
-    transform: scale(0.8);
-    margin-bottom: 1em;
-    margin-right: -15px;
-    left: 0;
-  }
-  .appContainer{
-    width: 375px;
+    transform: translate(-49.5%, -50.4%) scale(0.8);
   }
 }
 
-/* ====== PIXEL PORTRAIT ====== */
+@media screen and (min-width: 375px) and (min-height: 812px) {
+  .cardContainer {
+    transform: translate(-49.5%, -48.4%) scale(0.8);
+  }
+}
+@media screen and (min-width: 390px) and (min-height: 844px) {
+  .cardContainer {
+    transform: translate(-49.4%, -48%) scale(.8);
+  }
+}
+
+@media screen and (min-width: 393px) and (min-height: 786px) {
+  .cardContainer {
+    transform: translate(-49.6%, -49%) scale(0.8);
+  }
+}
+@media screen and (min-width: 393px) and (min-height: 851px) {
+  .cardContainer {
+    transform: translate(-49.6%, -48%) scale(0.8);
+  }
+}
+
+@media screen and (min-width: 411px) and (min-height: 731px) {
+  .cardContainer {
+    transform: translate(-49.8%, -49.8%) scale(0.8);
+  }
+}
 @media screen and (min-width: 411px) and (min-height: 823px) {
   .cardContainer {
-    transform: scale(1);
-    margin-bottom: 4em;
-  }
-  .appContainer {
-    width: 411px;
+    transform: translate(-49.8%, -48.1%) scale(1);
   }
 }
-
-/* ====== TABLET IPOD PORTRAIT ====== */
-@media screen and (min-width: 768px) and (min-height: 1024px) {
+@media screen and (min-width: 412px) and (min-height: 915px) {
   .cardContainer {
-    transform: scale(1.3);
-    left: 6px;
-  }
-  .appContainer {
-    width: 768px;
+    transform: translate(-50%, -47%) scale(1);
   }
 }
-/* ====== TABLET IPOD PRO PORTRAIT ====== */
-@media screen and (min-width: 1024px) and (min-height: 1366px) {
+@media screen and (min-width: 540px) and (min-height: 720px) {
   .cardContainer {
-    transform: scale(1.7);
-    margin-bottom: 10em;
-  }
-  .appContainer {
-    width: 1024px;
-
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }
-/* ====== TABLET IPOD PRO PORTRAIT ====== */
-@media screen and (min-width: 1200px) and (min-height: 2000px) {
+@media screen and (min-width: 600px) and (min-height: 868px) {
   .cardContainer {
-    transform: scale(2.4);
+    transform: translate(-50%, -48%) scale(1);
   }
-  .appContainer{
-    width: 1200px;
+}
+@media screen and (min-width: 768px) and (min-height: 1024PX) {
+  .cardContainer {
+    transform: translate(-51%, -54%) scale(1.3);
+  }
+}
+@media screen and (min-width: 810px) and (min-height: 1180PX) {
+  .cardContainer {
+    transform: translate(-51%, -52%) scale(1.3);
+  }
+}
+@media screen and (min-width: 912px) and (min-height: 1368PX) {
+  .cardContainer {
+    transform: translate(-51%, -49%) scale(1.3);
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 600PX) {
+  .cardContainer {
+    transform: translate(-50%, -51%) scale(.7);
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 1366PX) {
+  .cardContainer {
+    transform: translate(-51%, -58%) scale(1.7);
+  }
+}
+@media screen and (min-width: 1200px) and (min-height: 2000PX) {
+  .cardContainer {
+    transform: translate(-51%, -50%) scale(2.4);
+  }
+}
+@media screen and (min-width: 1280px) and (min-height: 800PX) {
+  .cardContainer {
+    transform: translate(-51%, -49%) scale(0.9);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .cardContainer {
+    transform: translate(-50.2%, -50%) scale(.8);
   }
 }
